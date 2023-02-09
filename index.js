@@ -1,5 +1,6 @@
 const { Client, GatewayIntentBits } = require("discord.js");
 const { Configuration, OpenAIApi } = require("openai");
+require('dotenv').config()
 
 const configuration = new Configuration({
     apiKey: "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"
@@ -42,6 +43,4 @@ client.on('messageCreate', async (msg) => {
 
 });
 
-client.login(
-    "MTA3MjgyMjQwODI5OTQyOTkxOA.GqtAkZ.ZpAejnCGvSFE_li1KXD2eT-DoItum3_bZEsYpk"
-);
+client.login(process.env.BOT_DISCORD_TOKEN);
